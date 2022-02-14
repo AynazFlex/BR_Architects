@@ -1,0 +1,315 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    position: relative;
+    margin: auto;
+    max-width: 1500px;
+}
+
+.header img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.header__text {
+    position: absolute;
+    top: calc(50% - 40.44px);
+    left: 0;
+    right: 0;
+}
+
+.header__text h1 {
+    text-align: center;
+}
+
+.header__logo {
+    padding: 8px 16px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.header__logo-name {
+    padding: 0 0 0 10px;
+    color: #f1f1f1;
+}
+
+.nav-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    width: 100%;
+    background: white;
+    box-sizing: inherit;
+    padding: 8px 16px;
+    z-index: 1;
+}
+
+.menu-button {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10.5px;
+    right: 18.5px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.menu-button_open {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.menu-button::before,
+.menu-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.menu-button::before {
+    top: 0;
+}
+
+.menu-button::after {
+    bottom: 0;
+}
+
+.close {
+    position: absolute;
+    top: 10.5px;
+    right: 18.5px;
+}
+
+.close::before,
+.close::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: -6px;
+    width: 42px;
+    height: 4px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.close::before {
+    transform: rotate(45deg);
+}
+
+.close::after {
+    transform: rotate(-45deg);
+}
+
+.close .menu-button_open {
+    width: 0;
+    left: 15px;
+    transition: 0.3s;
+}
+
+.nav-panel__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-panel__link {
+    display: flex;
+}
+
+.nav-panel a {
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+}
+
+.nav-panel a:hover, .main__architect-contact:hover {
+    background: #ccc;
+}
+
+.main {
+    max-width: 1564px;
+    margin: auto;
+    padding: 0 32px 5px;
+    box-sizing: inherit;
+}
+
+.main__paragraph {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.main__projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.main__projects-images {
+    position: relative;
+    width: calc((100% - 30px)/4);
+    margin-bottom: 10px;
+}
+
+.main__projects-images img {
+    width: 100%;
+    margin: 0;
+}
+.main__projects-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+}
+
+.main__description p {
+    margin: 0;
+    padding-bottom: 43.4px;
+}
+
+.main__architects {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.main__architect-card {
+    width: calc((100% - 30px)/4);
+}
+
+.main__architect-card img {
+    width: 100%;
+}
+
+.main__opacity {
+    opacity: 0.6;
+}
+
+.main__architect-contact {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    color: #000;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.main__form {
+    margin-bottom: 32px;
+}
+
+.cart-place_img {
+    width: 100%;
+}
+
+.main__form input {
+    font-size: 16px;
+    box-sizing: inherit;
+    font: inherit;
+    margin: 16px 0;
+}
+
+.main__form input[type=text] {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 8px;
+}
+
+.main__form input[type=submit] {
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px 16px;
+    background: rgb(0, 0, 0);
+    border: none;
+    color: white;
+}
+
+.main__form input:first-child {
+    margin-top: 0;
+}
+
+.footer {
+    background-color: black;
+    padding: 16px 0;
+    color: white;
+    text-align: center;
+    font: inherit;
+}
+
+@media screen and (max-width:992px) {
+    .main__projects-images {
+        width: calc((100% - 10px)/2);
+    }
+    .main__architect-card {
+        width: calc((100% - 10px)/2);
+        margin-bottom: 16px;
+    }
+}
+
+@media  screen and (max-width:600px) {
+    .main__projects-images {
+        width: 100%;
+        padding: 0;
+    }
+    .main__architect-card {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .nav-panel_right {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        z-index: 1;
+        transform: translate(0px, -100%);
+        transition: 0.5s;
+    }
+    .nav-panel_right .nav-panel__link {
+        display: inline-flex;
+        flex-direction: column;
+        padding: 50.5px 0;
+    }
+    .header__logo-name {
+        display: none;
+    }
+    .burger {
+        display: block;
+        z-index: 1;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+.actice-nav {
+    transform: translate(0px, 0px);
+    transition: 0.5s;
+}
