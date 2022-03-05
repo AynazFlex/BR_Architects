@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
+    <header id="b" class="header">
         <img src="src/architect.jpg" alt="#">
         <div class="header__text">
             <h1>
@@ -29,14 +29,14 @@
         <div class="nav-panel__item">
             <div class="nav-panel_left">
                 <div class="nav-panel__link">
-                    <a href="#"><b>BR</b> Architects</a>
+                    <a href="#b"><b>BR</b> Architects</a>
                 </div>
             </div>
             <div class="nav-panel_right">
-                <div class="nav-panel__link">
-                    <a href="#">Projects</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                <div id="nav-panel" class="nav-panel__link">
+                    <a href="#p">Projects</a>
+                    <a href="#a">About</a>
+                    <a href="#c">Contact</a>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
     </nav>
     <main class="main">
         <div class="main__root">
-            <div class="main__paragraph">
+            <div id="p" class="main__paragraph">
                 <h3>Projects</h3>
             </div>
             <div class="main__projects">
@@ -83,7 +83,7 @@
                     <span class="main__projects-name">Barn House</span>
                 </div>
             </div>
-            <div class="main__description">
+            <div id="a" class="main__description">
                 <div class="main__paragraph">
                     <h3>About</h3>
                 </div>
@@ -121,7 +121,7 @@
                     <button class="main__architect-contact">Contact</button>
                 </div>
             </div>
-            <div class="main__paragraph">
+            <div id="c" class="main__paragraph">
                 <h3>Contact</h3>
             </div>
             <div class="main__form">
